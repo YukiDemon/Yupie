@@ -1,0 +1,28 @@
+<div class="calculator">
+  <h1>Aplicación de Calculadora</h1>
+  <div>
+    <label>Operando A: </label>
+    <input
+      class="form-control form-control-lg"
+      type="text"
+      (input)="A($event)"
+      placeholder="Ingresa un número"
+      aria-label=".form-control-lg example"
+    />
+  </div>
+  <div>
+    <label>Operando B: </label>
+    <input
+      class="form-control form-control-lg"
+      type="text"
+      (input)="B($event)"
+      placeholder="Ingresa un número"
+      aria-label=".form-control-lg example"
+    />
+  </div>
+  <button (click)="Operation()" class="btn btn-primary">SUMAR</button>
+  <div class="Resultado">
+    <div>RESULTADO :</div>
+    <div>{{ result == 0 ? "" : result }}</div>
+  </div>
+</div>
