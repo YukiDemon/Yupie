@@ -1,7 +1,7 @@
 <div class="calculator">
-  <h1>Aplicación de Calculadora</h1>
-  <div>
-    <label>Operando A: </label>
+  <h1>Calculadora</h1>
+  <div class="Operator">
+    <label>Número 1: </label>
     <input
       class="form-control form-control-lg"
       type="text"
@@ -9,9 +9,10 @@
       placeholder="Ingresa un número"
       aria-label=".form-control-lg example"
     />
+    <span *ngIf="spanOcult1">Ingresa el dato correctamente</span>
   </div>
-  <div>
-    <label>Operando B: </label>
+  <div class="Operator">
+    <label>Número 2: </label>
     <input
       class="form-control form-control-lg"
       type="text"
@@ -19,10 +20,29 @@
       placeholder="Ingresa un número"
       aria-label=".form-control-lg example"
     />
+    <span *ngIf="spanOcult2">Ingresa el dato correctamente</span>
   </div>
-  <button (click)="Operation()" class="btn btn-primary">SUMAR</button>
-  <div class="Resultado">
-    <div>RESULTADO :</div>
-    <div>{{ result == 0 ? "" : result }}</div>
+  <div class="buttons">
+    <button (click)="Suma()" (click)="SpanOcult()" class="btn btn-primary">
+      SUMAR
+    </button>
+    <button (click)="Resta()" (click)="SpanOcult()" class="btn btn-primary">
+      RESTAR
+    </button>
+    <button
+      (click)="Multiplicar()"
+      (click)="SpanOcult()"
+      class="btn btn-primary"
+    >
+      MULTIPLICAR
+    </button>
+    <button (click)="Dividir()" (click)="SpanOcult()" class="btn btn-primary">
+      DIVIDIR
+    </button>
+  </div>
+
+  <div class="Resultado" *ngIf="Ocult">
+    <div class="title">RESULTADO:</div>
+    <div class="result">{{ result == 0 ? "" : result }}</div>
   </div>
 </div>

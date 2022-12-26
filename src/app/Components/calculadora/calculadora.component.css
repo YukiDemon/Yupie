@@ -1,0 +1,63 @@
+.calculator{
+    border: 2px solid black;
+    width: 60%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+h1{
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center  ;
+    margin: 5% 0% 2% 0%;
+}
+
+.Operator{
+    width: 50%;
+    margin: 0% 25% 2% 25%;
+}
+
+.Operator label{
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Operator input{
+    width: 50%;
+    margin: 2% 30% 2% 20%;
+}
+
+.buttons{
+    width: 70%;
+    margin: 5% 15% 2% 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Resultado{
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid yellow;
+    width: 40%;
+    margin: 5% 30% 5% 30%;
+}  
+
+.title{
+    width: 50%; 
+    text-align: center;
+}
+
+.result{
+    font-family: monaco,Consolas,Lucida Console,monospace; 
+    font-size: 30px;
+    font-weight: bold;
+    border: 2px solid blue;
+    width: 50%;
+    text-align: center;
+}
