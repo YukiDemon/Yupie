@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./postres.component.css']
 })
 export class PostresComponent {
-
 }

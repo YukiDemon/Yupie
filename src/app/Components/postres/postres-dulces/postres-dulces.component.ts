@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./postres-dulces.component.css']
 })
 export class PostresDulcesComponent {
-
-
   sweetDessert : Array<any> = [
     {nombre:'Pie de Manzana', precio: 25 + ' ' + 'soles'},
     {nombre:'Pie de Piña', precio: 30 + ' ' + 'soles'},
