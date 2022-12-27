@@ -1,0 +1,43 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid black;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 30%;
+    height: 25vh;
+    border: 2px solid blue;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    background-color: rgb(70, 70, 70);
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.div-logo{
+    width: 30%;
+    height: 17vh;
+    margin: 2% 2.5% 2% 2.5%;
+}
+
+.logo{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.open{
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.rigth{
+    width: 70%;
+    border: 2px solid yellow;
+}
