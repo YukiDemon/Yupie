@@ -7,5 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  postre : boolean = false;
+  calculadora : boolean = false;
 
+  mostrarpostres(){
+    this.postre = !this.postre;
+  }
+
+  mostrarcalculadora(){
+    this.calculadora = !this.calculadora;
+  }
+
+  // mostrarpersonas(){}
 }

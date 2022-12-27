@@ -1,21 +1,15 @@
 <div class="container">
   <div class="left">
-    <div class="div-logo">
-      <img
-        class="logo"
-        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAAAeFBMVEX///8jIyMeHh4gICAbGxsAAADz8/PV1dWHh4fc3NyEhIRQUFDKyspAQEATExMYGBhubm7p6ektLS34+Pjw8PDh4eGzs7MNDQ25ubkmJiY7OzumpqZpaWlKSkpycnJXV1c0NDSZmZmioqJ7e3uPj4+/v79dXV3GxsZRhU6/AAAElUlEQVR4nO3ZaXeiOgAG4GxVNo2IUGUTBO3//4c3hCWh7dSemTmFO+d9vtQQoHlJCBshAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/IApdN4zG0iZ245OpVMWp8jSvmm3Y1W3svb5feTlxnRdFXm91IXprHzu/SYamdcWiONxc9TtMGn939c5TjG2d74oyC9XPU1f3cN6mw3Q6e3rliCxum1PJmOTXu2pMlBVMqFLVhLrytuNd8ZK/EbespGBCpF5fRc5XVSfksXRJ6FWiq9vVw07DNtULqnrz+X/9OadcctoRherD80XoApdNV5lcWF8Uu3Bcj4tSbxinQi/g+5x4/U/K5F3XRdmwIaO35aL1smPfNkqlE4U7MRTYMSDEnYr0ZZuy4Sff6xSH/VAUWc2mfVx1925348qicJfNF5ZjUyirtvUrnUoOIe1UpwJObaaiVIPZHQ4Mp23Cx3yUH8/dXrNXsyBbNmD8mDqJijYzBVZuotIUVcApBbvGhAR0GJXl2Ter8YvO4+ynBbRddp6xA/LjtjD9WW42h1lAU+W7U0B2TUrTgWNAb2+WOMtOM9YQpXRf36aWqSH6LqDpQROQp1l7MfnGIWoFpAsHJDerfcwPxqmEX+7vA37Sg1y0SWUdITWnxO8CLt2DJLTGKKV1PTRX5uR5D3LRvB3tfFz2U4pnnYNLBySZ1YXice/PQn7Zfgj4sQflI/CllY8Ol8hVDVF1pbemmerm6LjCiZ73IPOTxu5+Kg5xv89VBSRvVmtYk3VB+svzk4CsylpqTTD9vZC2qiFKSGlNCWmiptXhVHoWsM1SOx+rknGP6+pBYu7C1JXCySoucj3Uvj4HeZMU9gDll3ra45pmUSWqzUjj1Tnfp/pi9iTg9XywJxjOG/P0t7IeJO51dr/20vRt+jKge/dmEwyvtmaHawsYmUcKdRYG6uFP+zJgdBP2CahG6M3cdK4tIIlz6yxs46GlX04y7uwOplua3qf9rS4gsbuQjz3xjXvRWcLrNEjXFzCxAr4OryS+cS86w2U+brmyWZT8nYDqUb8dwqy6B+lvB1RLhjcwqw74+z3YPQ4Gesv/Z8Bnk0xHPt4/D64v4C+H6HcCclF29zOrDvgnQ7S7GnZ3Cf/oLKq3Zt088w/3IBfda8L1BQwqK+C48PsBrfeGolYBHfMCeen3ooOT9d66mJY2n08y4qH6OK6sScc8GHLaPStn5ol+6Tfbo3ZsEufnaeHdhLADyvnba75PrG8R+jphnr/kI/zVv/xZod9/PGLcM8+tkbPnHwJy6W/6LYavS/IQkSTtE4nhtUVSDeVj8vn/+3nB4SKFkJVjH/GTd1QLOy/bVH8dFJLnwbgFVZX7qon1d0UphRS74YvnKfOlZFIUySrOQC1OGv/q3OdfnU9n7+p3dm5e6B+HWzxtkaktvLPeItrWD3/8TNyVg/pR5HXwY83/jui0+Xi8o81JI8Pf2Sr2FmrFed3ms90BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwF/1H16LS+t5YejBAAAAAElFTkSuQmCC"
-      />
-    </div>
-    <div class="div-button">
-      <button class="open">></button>
-    </div>
+    <button (click)="mostrarpostres()">Postres</button>
+    <button (click)="mostrarcalculadora()">Calculadora</button>
+    <!-- <button (click)="(mostrarpersonas)">Lista de personas</button> -->
   </div>
   <div class="rigth">
-    <div>
+    <div *ngIf="postre">
       <app-postres></app-postres>
     </div>
 
-    <div>
+    <div *ngIf="calculadora">
       <app-calculadora></app-calculadora>
     </div>
   </div>
