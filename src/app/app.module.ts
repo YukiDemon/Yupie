@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { PostresDulcesComponent } from './Components/postres/postres-dulces/postres-dulces.component';
 import { PostresSaladosComponent } from './Components/postres/postres-salados/postres-salados.component';
 import { CalculadoraComponent } from './Components/calculadora/calculadora.component';
+import { PostresComponent } from './Components/postres/postres.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PostresComponent,
     PostresDulcesComponent,
     PostresSaladosComponent,
     CalculadoraComponent

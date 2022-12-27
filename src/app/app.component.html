@@ -1,23 +1,5 @@
-<div class="Container">
-  <h1>YUPPIE</h1>
-  <h2>Lista de Postres</h2>
-  <button (click)="sweetHide()" [disabled]="SweetDisabled">
-    {{ SweetText }}
-  </button>
-  <button (click)="saltyHide()" [disabled]="SaltyDisabled">
-    {{ SaltyText }}
-  </button>
-
-  <div class="Sweeties">
-    <div *ngIf="showHideSweetDessert">
-      <app-postres-dulces></app-postres-dulces>
-    </div>
-  </div>
-  <div class="Salties">
-    <div *ngIf="showHideSaltyDessert">
-      <app-postres-salados></app-postres-salados>
-    </div>
-  </div>
+<div>
+  <app-postres></app-postres>
 </div>
 
 <div>
