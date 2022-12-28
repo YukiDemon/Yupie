@@ -7,14 +7,18 @@ import { PostresDulcesComponent } from './Components/postres/postres-dulces/post
 import { PostresSaladosComponent } from './Components/postres/postres-salados/postres-salados.component';
 import { CalculadoraComponent } from './Components/calculadora/calculadora.component';
 import { PostresComponent } from './Components/postres/postres.component';
+import { PersonasComponent } from './Components/personas/personas.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
+    FormsModule,
     PostresComponent,
     PostresDulcesComponent,
     PostresSaladosComponent,
-    CalculadoraComponent
+    CalculadoraComponent,
+    PersonasComponent
   ],
   imports: [
     BrowserModule,
