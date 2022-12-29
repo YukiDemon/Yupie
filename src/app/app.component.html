@@ -1,9 +1,19 @@
 <div class="container">
-  <div class="left">
-    <button (click)="mostrarpostres()">Postres</button>
-    <button (click)="mostrarcalculadora()">Calculadora</button>
-    <button (click)="mostrarpersonas()">Calculadora</button>
-    <!-- <button (click)="(mostrarpersonas)">Lista de personas</button> -->
+  <div [ngClass]="{ left: open, lefttransform: !open }">
+    <div [ngClass]="{ ocultbuttons: ocult, showbutttons: !ocult }">
+      <div class="a-title">
+        <a (click)="mostrarpostres()">POSTRES</a>
+      </div>
+      <div class="a-title">
+        <a (click)="mostrarcalculadora()">CALCULADORA</a>
+      </div>
+      <div class="a-title">
+        <a (click)="mostrarpersonas()">PERSONAS</a>
+      </div>
+    </div>
+    <div>
+      <button (click)="transform()">...</button>
+    </div>
   </div>
   <div class="rigth">
     <div *ngIf="postre">
@@ -13,8 +23,9 @@
     <div *ngIf="calculadora">
       <app-calculadora></app-calculadora>
     </div>
-  </div>
-  <div *ngIf="personas">
-    <app-personas></app-personas>
+
+    <div *ngIf="personas">
+      <app-personas></app-personas>
+    </div>
   </div>
 </div>

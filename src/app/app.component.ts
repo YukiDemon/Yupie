@@ -7,28 +7,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  
+  open : boolean = true;
+  ocult : boolean = true;
+
   postre : boolean = false;
   calculadora : boolean = false;
   personas : boolean = false;
 
+  transform(){
+    this.open = !this.open;
+    this.ocult = !this.ocult
+  }
+
   mostrarpostres(){
-    this.postre = !this.postre;
-    if(this.postre = !this.postre){
-      this.calculadora = false
-    }
+    this.postre = true;
   }
 
   mostrarcalculadora(){
-    this.calculadora = !this.calculadora;
-    if(this.calculadora = !this.calculadora){
-
-    }
+    this.calculadora = true;
   }
 
   mostrarpersonas(){
-    this.personas = !this.personas;
-    if(this.personas = !this.personas){
-
-    }
+    this.personas =true;
   }
+
 }

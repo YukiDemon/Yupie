@@ -1,20 +1,34 @@
 <div class="container">
-  <div class="add">
-    <input
-      class="form-control form-control-lg"
-      type="text"
-      placeholder="Nombre"
-      aria-label=".form-control-lg example"
-    />
-    <input
-      class="form-control form-control-lg"
-      type="text"
-      placeholder="Apellido"
-      aria-label=".form-control-lg example"
-    />
-  </div>
+  <form class="form-row">
+    <div class="form-group col-md-2">
+      <label for="nombre" class="sr-only">Nombre</label>
+      <input
+        class="form-control"
+        type="text"
+        name="nombre"
+        id="nombre"
+        placeholder="Nombre"
+        [(ngModel)]="nombreInput"
+      />
+    </div>
+    <div class="form-group col-md-2">
+      <label for="nombre" class="sr-only">Nombre</label>
+      <input
+        class="form-control"
+        type="text"
+        name="apellido"
+        id="apellido"
+        placeholder="Apellido"
+        [(ngModel)]="apellidoInput"
+      />
+    </div>
+
+    <button class="add-person" (click)="Add()">Agregar</button>
+  </form>
   <div class="List">
     <h1>LISTA DE PERSONAS</h1>
-    <div class="List-person" *ngFor="let persona of personas"></div>
+    <div class="List-person" *ngFor="let persona of personas; let i = index">
+      {{ i + 1 }}.- {{ persona.nombre }} {{ persona.apellido }}
+    </div>
   </div>
 </div>
