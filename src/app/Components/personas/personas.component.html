@@ -1,33 +1,36 @@
-<div class="container">
-  <form class="form-row">
-    <div class="form-group col-md-2">
-      <label for="nombre" class="sr-only">Nombre</label>
-      <input
-        class="form-control"
-        type="text"
-        name="nombre"
-        id="nombre"
-        placeholder="Nombre"
-        [(ngModel)]="nombreInput"
-      />
+<div class="personas-container">
+  <form class="add-date">
+    <div class="div-date">
+      <div class="date">
+        <label for="nombre" class="Name">Nombre</label>
+        <input
+          class="form-control"
+          type="text"
+          name="nombre"
+          id="nombre"
+          placeholder="Nombre"
+          [(ngModel)]="nombreInput"
+        />
+      </div>
+      <div class="date">
+        <label for="nombre" class="sr-only">Apellido</label>
+        <input
+          class="form-control"
+          type="text"
+          name="apellido"
+          id="apellido"
+          placeholder="Apellido"
+          [(ngModel)]="apellidoInput"
+        />
+      </div>
     </div>
-    <div class="form-group col-md-2">
-      <label for="nombre" class="sr-only">Nombre</label>
-      <input
-        class="form-control"
-        type="text"
-        name="apellido"
-        id="apellido"
-        placeholder="Apellido"
-        [(ngModel)]="apellidoInput"
-      />
+    <div class="div-button">
+      <button class="add-person" (click)="Add()">Agregar</button>
     </div>
-
-    <button class="add-person" (click)="Add()">Agregar</button>
   </form>
-  <div class="List">
+  <div class="list">
     <h1>LISTA DE PERSONAS</h1>
-    <div class="List-person" *ngFor="let persona of personas; let i = index">
+    <div class="list-person" *ngFor="let persona of personas; let i = index">
       {{ i + 1 }}.- {{ persona.nombre }} {{ persona.apellido }}
     </div>
   </div>

@@ -71,5 +71,6 @@ button{
 }
 
 .rigth{
-    width: 70%;
+    width: 100%;
+    border: 2px solid blue;
 }
