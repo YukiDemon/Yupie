@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   mostrarcalculadora(){
-    this.calculadora = true;
+    this.calculadora = !this.calculadora;
   }
 
   mostrarpersonas(){

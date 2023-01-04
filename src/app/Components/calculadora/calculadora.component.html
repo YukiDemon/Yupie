@@ -1,24 +1,33 @@
-<div class="calculator">
-  <h1>CALCULADORA</h1>
+<div class="calculator" [ngClass]="{ close: close, calculator: !close }">
+  <div class="calculator-title">
+    <div class="calc-title">
+      <h1>CALCULADORA</h1>
+      <button (click)="Close()">
+        <i class="fa-solid fa-circle-xmark"></i>
+      </button>
+    </div>
+  </div>
   <div class="calculator-container">
     <div class="operator">
       <input
         class="form-control form-control-lg"
-        type="number"
+        type="text"
         (input)="A($event)"
         placeholder="Ingresa un número"
+        z
         aria-label=".form-control-lg example"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
       />
-      <span *ngIf="spanOcult1">Ingresa el dato correctamente</span>
-
+      <div *ngIf="spanOcult1"><span>Ingresa el dato correctamente</span></div>
       <input
         class="form-control form-control-lg"
-        type="number"
+        type="text"
         (input)="B($event)"
         placeholder="Ingresa un número"
         aria-label=".form-control-lg example"
+        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
       />
-      <span *ngIf="spanOcult2">Ingresa el dato correctamente</span>
+      <div *ngIf="spanOcult2"><span>Ingresa el dato correctamente</span></div>
     </div>
     <div class="buttons">
       <div class="button-group">
