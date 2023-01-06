@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Postre } from 'src/app/Models/postre.model';
 
 @Component({
   selector: 'app-postres-dulces',
@@ -6,8 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./postres-dulces.component.css']
 })
 export class PostresDulcesComponent {
-  sweetDessert : Array<any> = [
-    {nombre:'Pie de Manzana', precio: 25 + ' ' + 'soles'},
-    {nombre:'Pie de Piña', precio: 30 + ' ' + 'soles'},
-    {nombre:'Pie de Manzana', precio: 35 + ' ' + 'soles'}];
+  @Input() sweet : Postre;
 }

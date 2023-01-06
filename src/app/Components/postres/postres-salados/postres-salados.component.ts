@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Postre } from 'src/app/Models/postre.model';
 
 @Component({
   selector: 'app-postres-salados',
@@ -6,8 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./postres-salados.component.css']
 })
 export class PostresSaladosComponent {
-  SaltyDessert : Array<any> = [
-    { nombre:'Tequeños de Jamon y Queso', precio: 25 + ' ' + 'soles'},
-    {nombre:'Tequeños de Aji de gallina', precio: 30 + ' ' + 'soles'},
-    {nombre:'Tequeños de Lomo saltado', precio: 35 + ' ' + 'soles'}];
+  @Input() salty : Postre;
 }
