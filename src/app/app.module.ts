@@ -10,6 +10,8 @@ import { PostresComponent } from './Components/postres/postres.component';
 import { PersonasComponent } from './Components/personas/personas.component';
 import { FormsModule } from '@angular/forms';
 import { PedidosComponent } from './Components/postres/pedidos/pedidos.component';
+import { arregloPersonas } from './Services/arregloPersonas.services';
+import { loginService } from './Services/loginService.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { PedidosComponent } from './Components/postres/pedidos/pedidos.component
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [arregloPersonas,loginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

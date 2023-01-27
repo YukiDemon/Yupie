@@ -32,6 +32,7 @@
     <h1>LISTA DE PERSONAS</h1>
     <div class="list-person" *ngFor="let persona of personas; let i = index">
       {{ i + 1 }}.- {{ persona.nombre }} {{ persona.apellido }}
+      <button type="submit" class="btn btn-info" (click)="Edit()"> Editar</button>
     </div>
   </div>
 </div>
