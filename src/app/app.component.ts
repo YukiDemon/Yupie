@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,22 +13,28 @@ export class AppComponent {
   postre : boolean = false;
   calculadora : boolean = false;
   personas : boolean = false;
+  presupuesto : boolean = false;
 
   transform(){
     this.open = !this.open;
     this.ocult = !this.ocult
   }
 
-  mostrarpostres(){
+  mostrarPostres(){
     this.postre = true;
   }
 
-  mostrarcalculadora(){
+  mostrarCalculadora(){
     this.calculadora = !this.calculadora;
   }
 
-  mostrarpersonas(){
+  mostrarPersonas(){
     this.personas =true;
   }
+
+  mostrarPresupuesto(){
+    this.presupuesto = !this.presupuesto;
+  }
+
 
 }

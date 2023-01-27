@@ -12,6 +12,11 @@ import { FormsModule } from '@angular/forms';
 import { PedidosComponent } from './Components/postres/pedidos/pedidos.component';
 import { arregloPersonas } from './Services/arregloPersonas.services';
 import { loginService } from './Services/loginService.service';
+import { PresupuestoComponent } from './Components/presupuesto/presupuesto.component';
+import { HeaderComponent } from './Components/presupuesto/header/header.component';
+import { FormularioComponent } from './Components/presupuesto/formulario/formulario.component';
+import { IngresosComponent } from './Components/presupuesto/ingresos/ingresos.component';
+import { EgresosComponent } from './Components/presupuesto/egresos/egresos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { loginService } from './Services/loginService.service';
     PostresSaladosComponent,
     CalculadoraComponent,
     PersonasComponent,
-    PedidosComponent
+    PedidosComponent,
+    PresupuestoComponent,
+    HeaderComponent,
+    FormularioComponent,
+    IngresosComponent,
+    EgresosComponent
   ],
   imports: [
     BrowserModule,

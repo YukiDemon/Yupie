@@ -2,13 +2,16 @@
   <div [ngClass]="{ left: open, lefttransform: !open }">
     <div [ngClass]="{ ocultbuttons: ocult, showbutttons: !ocult }">
       <div class="a-title">
-        <a (click)="mostrarpostres()">POSTRES</a>
+        <a (click)="mostrarPostres()">POSTRES</a>
       </div>
       <div class="a-title">
-        <a (click)="mostrarcalculadora()">CALCULADORA</a>
+        <a (click)="mostrarCalculadora()">CALCULADORA</a>
       </div>
       <div class="a-title">
-        <a (click)="mostrarpersonas()">PERSONAS</a>
+        <a (click)="mostrarPersonas()">PERSONAS</a>
+      </div>
+      <div class="a-title">
+        <a (click)="mostrarPresupuesto()">PRESUPUESTO</a>
       </div>
     </div>
     <div>
@@ -26,6 +29,10 @@
 
     <div *ngIf="personas">
       <app-personas></app-personas>
+    </div>
+
+    <div *ngIf="presupuesto">
+      <app-presupuesto></app-presupuesto>
     </div>
   </div>
 </div>
