@@ -15,13 +15,21 @@ export class AppComponent {
   personas : boolean = false;
   presupuesto : boolean = false;
 
+  textButton : string = "Click para mostrar";
+  
+
   transform(){
     this.open = !this.open;
     this.ocult = !this.ocult
+    if(!this.ocult){
+      this.textButton = "Click para ocultar";
+    }else{
+      this.textButton = "Click para mostrar";
+    }
   }
 
   mostrarPostres(){
-    this.postre = true;
+    this.postre = !this.postre;
   }
 
   mostrarCalculadora(){
@@ -29,7 +37,7 @@ export class AppComponent {
   }
 
   mostrarPersonas(){
-    this.personas =true;
+    this.personas = !this.personas;
   }
 
   mostrarPresupuesto(){

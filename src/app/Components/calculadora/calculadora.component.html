@@ -1,11 +1,13 @@
 <div class="calculator" [ngClass]="{ close: close, calculator: !close }">
   <div class="calculator-title">
-    <div class="calc-title">
-      <h1>CALCULADORA</h1>
-      <button (click)="Close()">
-        <i class="fa-solid fa-circle-xmark"></i>
-      </button>
-    </div>
+      <div class="div-calculator-title">
+        <h1>CALCULADORA</h1>  
+      </div>
+      <div class="div-calculator-button">
+        <button (click)="Close()">
+          <img class="close-img" src ="../../../assets/icons8.png">  
+        </button>
+      </div>
   </div>
   <div class="calculator-container">
     <div class="operator">
