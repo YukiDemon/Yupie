@@ -21,11 +21,15 @@ export class AppComponent {
   transform(){
     this.open = !this.open;
     this.ocult = !this.ocult
-    if(!this.ocult){
-      this.textButton = "Click para ocultar";
-    }else{
-      this.textButton = "Click para mostrar";
-    }
+
+    this.textButton = !this.ocult ? "Click para ocultar" : "Click para mostrar";
+    
+    // if(!this.ocult){
+    //   this.textButton = "Click para ocultar";
+    // }else{
+    //   this.textButton = "Click para mostrar";
+    // }
+    
   }
 
   mostrarPostres(){
